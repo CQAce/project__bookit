@@ -1,0 +1,35 @@
+// Кнопочка для ссылки
+@mixin btn {
+    padding: 16px 40px; // подставить макет.
+
+    width: inherit; // подставить макет
+    height: inherit; // подставить макет
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #E0B100; // подставить макет
+    border: 1px solid #E0B100;
+    border-radius:  24px; // подставить макет
+    font-size: 16px; // подставить макет
+    font-weight: 600;
+    line-height: 100%;
+    color: #F5F5F5; // подставить макет
+}
+
+
+@mixin underlineLink {
+    display: inline-block; // позводяет расширить ссылку на всю ширину
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .8s;
+    color: #fff;
+    font-size: 16px;    
+    &:hover {
+        width: 100%;
+        background-size: 100% 1px;
+    }
+}
